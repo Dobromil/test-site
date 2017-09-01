@@ -1,0 +1,30 @@
+
+$mq-mobile-portrait	: 480px !default;
+$mq-tablet-portrait		: 768px !default;
+$mq-desktop				: 1200px !default;
+
+@mixin mobile-and-up {
+	@media (min-width : $mq-mobile-portrait) {
+		@content;
+	}
+}
+
+@mixin medium-and-up {
+	@media (min-width : $mq-tablet-portrait) {
+		@content;
+	}
+}
+
+@mixin desctop {
+	@media (min-width : $mq-desktop	) {
+		@content;
+	}
+}
+
+@mixin clear-fix {
+	&::after {
+		content: '';
+		clear: both;
+		display:table;
+	}
+}

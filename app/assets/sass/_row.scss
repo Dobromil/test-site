@@ -1,0 +1,41 @@
+.row {
+
+	@include clear-fix;
+	
+	&--gutters {
+		margin-right: -65px;
+	}
+
+	&--gutters > div {
+		padding-right: 65px;
+	}
+
+	&__b-margin-query{
+      margin-bottom:1rem;
+	}
+
+	@include mobile-and-up {
+
+	&__b-margin-query{
+      margin-bottom:0rem;
+	}
+
+	 &__medium-4 {
+		float: left;
+		width: 33.33%;
+	}
+	 &__medium-4--larger {
+		width: 37%;
+	}
+
+	&__medium-8 {
+		float:left;
+		width:66.66%;
+	}
+	 &__medium-8--smaller {
+		width: 63%;
+	}
+	 	}
+
+	
+}

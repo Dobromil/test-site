@@ -1,0 +1,38 @@
+body {
+	background-color: white;
+	font-family: roboto, sans-serif;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display:block;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+.wrapper {
+	padding-left: 15px;
+	padding-right: 15px;
+	overflow: hidden;
+	max-width:1236px;
+	margin:0 auto;
+	&--medium {
+		max-width:976px;
+	}
+	.wrapper {
+		padding-left: 0;
+		padding-right: 0;
+    }
+
+    &--b-margin {
+    	margin-bottom:1rem;
+
+    	@include mobile-and-up {
+	 	margin-bottom:3.75rem;
+	 	}
+    	
+    }
+}
