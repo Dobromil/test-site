@@ -1,6 +1,10 @@
 .row {
 
 	@include clear-fix;
+
+	&--t-padding {
+	  padding-top: 80px	
+	}
 	
 	&--gutters {
 		margin-right: -65px;
@@ -16,6 +20,13 @@
 
 	&--gutters-large > div {
 		padding-right: 100px;
+	}
+
+	&--gutters-small {
+		margin-right: -45px;
+	}
+	&--gutters-small > div {
+		padding-right: 45px;
 	}
 
 	&__b-margin-query{
@@ -48,6 +59,16 @@
 		width:50%;
 	}
  }
-
+/* Equal height flexbox*/
+ &--equal-height-m {
+  @include mobile-and-up {
+  	display:flex;
+  }
+  & > div {
+  	justify-content: center;
+  	float:none;
+  	display:flex;
+  }
+ }
 	
 }
