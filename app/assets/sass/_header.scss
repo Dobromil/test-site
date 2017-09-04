@@ -1,0 +1,77 @@
+.site-header {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  padding: 10px 0;
+
+ 	 @include mobile-and-up {
+	 	background-color: transparentize($main-blue-color, 0.7);
+	  }
+  
+  &__menu-icon{
+  	width:20px;
+  	height: 20px;
+  	background-color:white;
+  	position:absolute;
+  	top: 20px;
+  	right:20px;
+  	
+  		@include mobile-and-up {
+  		display:none;
+  	}
+  } 
+
+  &__menu-content {
+  	display:none;
+  	@include mobile-and-up {
+  		display:block;
+  	}
+  }  
+
+  &__btn {
+  	float:right;
+  }
+
+  &__logo {
+  	position:absolute;
+  	background-color:$main-blue-color;
+  	padding:25px 36px;
+  	top:0;
+  	left:50%;
+  	transform:translateX(-50%) scale(0.8);
+  	transform-origin: 50% 0;
+
+  	@include mobile-and-up {
+  		left:auto;
+  		transform:translateX(0);
+  	}
+
+  }
+}
+
+.primary-nav {
+
+	&--pull-right {
+		float:right;
+	}
+
+	ul {
+		margin:0;
+		padding:0;
+		@include clear-fix;
+	}
+
+	li {
+		padding-right: 20px;
+		list-style: none;
+		float:left;
+	}
+
+	a {
+		color:#fff;
+		font-weight: 300;
+		text-decoration: none;
+		display:block;
+		padding:12px 0;
+	}
+}
