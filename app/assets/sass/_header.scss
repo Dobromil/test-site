@@ -3,33 +3,104 @@
   width: 100%;
   z-index: 1;
   padding: 10px 0;
+  transition: background-color 0.3s ease-in;
+
+  &--is-open {
+    background-color: transparentize($main-blue-color, 0.5);
+  }
 
  	 @include mobile-and-up {
 	 	background-color: transparentize($main-blue-color, 0.7);
 	  }
   
   &__menu-icon{
+    cursor: pointer;
   	width:20px;
   	height: 20px;
-  	background-color:white;
   	position:absolute;
   	top: 20px;
   	right:20px;
-  	
+    z-index:2;
+
+    &::before {
+      content:"";
+      position: absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:3px;
+      background-color: #fff;
+      transform-origin: 0 0;
+      transition: transform 0.3s ease-out;
+    }
+     &__middle {
+      position: absolute;
+      top:8px;
+      left:0;
+      width:100%;
+      height:3px;
+      background-color: #fff;
+      transition: all 0.3s ease-out;
+    }
+     &::after {
+      content:"";
+      position: absolute;
+      bottom:1px;
+      left:0;
+      width:100%;
+      height:3px;
+      background-color: #fff;
+      transform-origin: 0 100%;
+      transition: transform 0.3s ease-out;
+    }
+
+    &--close {
+      &::before {
+       transform: rotate(45deg) scaleX(1.25); 
+      }
+      .site-header__menu-icon__middle{
+        transform: translateX(-30px);
+        opacity:0;
+      }
+      &::after {
+       transform: rotate(-45deg) scaleX(1.25) translateY(1px); 
+      }
+    }
+
   		@include mobile-and-up {
   		display:none;
   	}
   } 
 
   &__menu-content {
-  	display:none;
+  	opacity: 0;
+    z-index:-999;
+    transform:scale(1.2);
+    position:relative;
+    padding-top:90px;
+    text-align:center;
+    transition: all 0.3s ease-out;
+
   	@include mobile-and-up {
-  		display:block;
+  		opacity:1;
+      z-index:1;
+      padding-top:0;
+      transform:scale(1);
   	}
+/// MOBILE MENU
+    &--is-visible {
+      opacity:1;
+      z-index:1;
+      transform:scale(1);
+    }
+
   }  
 
   &__btn {
-  	float:right;
+  	
+    @include mobile-and-up {
+      float:right;
+    }
   }
 
   &__logo {
@@ -50,9 +121,17 @@
 }
 
 .primary-nav {
+  padding-top: 10px;
+
+     @include mobile-and-up {
+       padding-top: 0;
+   }
+ 
 
 	&--pull-right {
-		float:right;
+
+    @include mobile-and-up {
+		float:right;}
 	}
 
 	ul {
@@ -62,16 +141,39 @@
 	}
 
 	li {
-		padding-right: 20px;
+		padding-right: 10px;
 		list-style: none;
-		float:left;
+    display:inline-block;
+		
+    @include mobile-and-up {
+      float:left;
+      padding-right: 20px;
+      display:block;
+    }
 	}
+
+ li:last-child {
+  padding-right:0;
+  @mixin mobile-and-up {
+    padding-right:20px;
+  }
+
+ }
 
 	a {
 		color:#fff;
 		font-weight: 300;
 		text-decoration: none;
 		display:block;
-		padding:12px 0;
+		padding:5px 8px;
+    font-size:0.8rem;
+    background-color: transparentize($main-blue-color, 0.5);
+
+    @mixin mobile-and-up {
+      padding:12px 0;
+      font-size: 1rem;
+      background-color: transparnet;
+
+    }
 	}
 }
