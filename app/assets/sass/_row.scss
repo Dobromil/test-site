@@ -14,29 +14,29 @@
 		margin-right: -100px;
 	}
 
-	&--gutters > div {
+	&--gutters>div {
 		padding-right: 65px;
 	}
 
-	&--gutters-large > div {
+	&--gutters-large>div {
 		padding-right: 100px;
 	}
 
 	&--gutters-small {
 		margin-right: -45px;
 	}
-	&--gutters-small > div {
+	&--gutters-small>div {
 		padding-right: 45px;
 	}
 
-	&__b-margin-query{
+	&__b-margin-query {
       margin-bottom:1rem;
 	}
 
 	@include mobile-and-up {
 
-	&__b-margin-query{
-      margin-bottom:0rem;
+	&__b-margin-query {
+      margin-bottom:0;
 	}
 
 	 &__medium-4 {
