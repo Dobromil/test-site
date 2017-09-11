@@ -22,10 +22,11 @@ img {
 	&--medium {
 		max-width:976px;
 	}
-	.wrapper {
-		padding-left: 0;
-		padding-right: 0;
-    }
+
+	&--modal{
+	  max-width:500px;
+	}
+
 
     &--b-margin {
     	margin-bottom:1rem;

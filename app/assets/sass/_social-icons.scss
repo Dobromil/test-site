@@ -1,0 +1,27 @@
+.social-icons {
+  text-align:center;
+
+  &__icon {
+    background-color: $main-orange-color;
+    display: inline-block;
+    height: 70px;
+    margin: 0 5px 5px;
+    position: relative;
+    width: 33%;
+
+    @include mobile-and-up {
+      height: 70px;
+      margin: 0 5px;
+      width: 70px;
+    }
+  }
+
+  &__img {
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+}
