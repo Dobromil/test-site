@@ -154,7 +154,7 @@
 
  li:last-child {
   padding-right:0;
-  @mixin mobile-and-up {
+  @include mobile-and-up {
     padding-right:20px;
   }
 
@@ -169,10 +169,10 @@
     font-size:0.8rem;
     background-color: transparentize($main-blue-color, 0.5);
 
-    @mixin mobile-and-up {
+    @include mobile-and-up {
       padding:12px 0;
       font-size: 1rem;
-      background-color: transparnet;
+      background-color: transparent;
 
     }
 	}
