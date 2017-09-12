@@ -11093,21 +11093,21 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 "use strict";
 
 
-var _mobileMenu = __webpack_require__(3);
-
-var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
-
-var _revealOnScroll = __webpack_require__(4);
-
-var _revealOnScroll2 = _interopRequireDefault(_revealOnScroll);
-
 var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _stickyHeader = __webpack_require__(5);
+var _mobileMenu = __webpack_require__(3);
+
+var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
+
+var _stickyHeader = __webpack_require__(4);
 
 var _stickyHeader2 = _interopRequireDefault(_stickyHeader);
+
+var _revealOnScroll = __webpack_require__(6);
+
+var _revealOnScroll2 = _interopRequireDefault(_revealOnScroll);
 
 var _modal = __webpack_require__(7);
 
@@ -11119,8 +11119,8 @@ var mobileMenu = new _mobileMenu2.default();
 new _revealOnScroll2.default((0, _jquery2.default)('.feature-item'), "85%");
 new _revealOnScroll2.default((0, _jquery2.default)('.testemonial'), "65%");
 
-var stickyHeader = new _stickyHeader2.default();
 var modal = new _modal2.default();
+var stickyHeader = new _stickyHeader2.default();
 
 /***/ }),
 /* 3 */
@@ -11189,69 +11189,7 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _noframework = __webpack_require__(1);
-
-var _noframework2 = _interopRequireDefault(_noframework);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var RevealOnScroll = function () {
-  function RevealOnScroll(element, offset) {
-    _classCallCheck(this, RevealOnScroll);
-
-    this.itemsToReveal = element;
-    this.offsetPerc = offset;
-    this.hideOnStart();
-    this.createWaypoints();
-  }
-
-  _createClass(RevealOnScroll, [{
-    key: 'hideOnStart',
-    value: function hideOnStart() {
-      this.itemsToReveal.addClass('reveal-item');
-    }
-  }, {
-    key: 'createWaypoints',
-    value: function createWaypoints() {
-      var that = this;
-      this.itemsToReveal.each(function () {
-        var currentItem = this;
-        new Waypoint({
-          element: currentItem,
-          handler: function handler() {
-            (0, _jquery2.default)(currentItem).addClass('reveal-item--is-visible');
-          },
-          offset: that.offsetPerc
-        });
-      });
-    }
-  }]);
-
-  return RevealOnScroll;
-}();
-
-exports.default = RevealOnScroll;
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-var _jquerySmoothScroll = __webpack_require__(6);
+var _jquerySmoothScroll = __webpack_require__(5);
 
 var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
 
@@ -11279,13 +11217,6 @@ var StickyHeader = function () {
   }
 
   _createClass(StickyHeader, [{
-    key: 'refreshWaypoints',
-    value: function refreshWaypoints() {
-      this.lazyImages.load(function () {
-        Waypoint.refreshAll();
-      });
-    }
-  }, {
     key: 'addSmoothScroll',
     value: function addSmoothScroll() {
       this.headerLinks.smoothScroll();
@@ -11337,6 +11268,13 @@ var StickyHeader = function () {
         });
       });
     }
+  }, {
+    key: 'refreshWaypoints',
+    value: function refreshWaypoints() {
+      this.lazyImages.on('load', function () {
+        Waypoint.refreshAll();
+      });
+    }
   }]);
 
   return StickyHeader;
@@ -11345,7 +11283,7 @@ var StickyHeader = function () {
 exports.default = StickyHeader;
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -11710,6 +11648,68 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 }));
 
 
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _noframework = __webpack_require__(1);
+
+var _noframework2 = _interopRequireDefault(_noframework);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var RevealOnScroll = function () {
+  function RevealOnScroll(element, offset) {
+    _classCallCheck(this, RevealOnScroll);
+
+    this.itemsToReveal = element;
+    this.offsetPerc = offset;
+    this.hideOnStart();
+    this.createWaypoints();
+  }
+
+  _createClass(RevealOnScroll, [{
+    key: 'hideOnStart',
+    value: function hideOnStart() {
+      this.itemsToReveal.addClass('reveal-item');
+    }
+  }, {
+    key: 'createWaypoints',
+    value: function createWaypoints() {
+      var that = this;
+      this.itemsToReveal.each(function () {
+        var currentItem = this;
+        new Waypoint({
+          element: currentItem,
+          handler: function handler() {
+            (0, _jquery2.default)(currentItem).addClass('reveal-item--is-visible');
+          },
+          offset: that.offsetPerc
+        });
+      });
+    }
+  }]);
+
+  return RevealOnScroll;
+}();
+
+exports.default = RevealOnScroll;
 
 /***/ }),
 /* 7 */
