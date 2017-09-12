@@ -8,6 +8,7 @@
   <meta name="description" content="Your clarity. One trip away. We create soul restoring journeys that inspire you to be you.">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
   <link rel="stylesheet" type="text/css" href="assets/styles/styles.css">
+  <script type="text/javascript" src="vendor.js"></script>
 </head>
 <body>
   <header class="site-header">
@@ -57,11 +58,11 @@
     <h2 class="headline headline--center headline--b-margin-small">The first trip we planned <strong>was our own.</strong></h2>
     <h3 class="headline headline--center headline--orange headline--small headline--width headline--b-margin-large">Ever since, we&rsquo;ve been working to make travel <strong>better for everyone.</strong></h3>
     <div class="wrapper wrapper--medium wrapper--b-margin">
-      <img src="assets/images/first-trip.jpg" alt="Couple walking down a street.">
+      <img class="lazyload" data-srcset="assets/images/first-trip.jpg" alt="Couple walking down a street.">
     </div>
     <div class="row row--gutters">  
     <div class="row__medium-4 row__medium-4--larger row__b-margin-query">
-      <img src="assets/images/our-start.jpg" alt="Our founder, Jane Doe">
+      <img class="lazyload" data-srcset="assets/images/our-start.jpg" alt="Our founder, Jane Doe">
     </div>
     <div class="row__medium-8 row__medium-8--smaller">
       <div class="generic-content">
@@ -78,29 +79,29 @@
 
   <div id="features" class="page-section page-section--blue" data-link="#features-link">
    <div class="wrapper">
-    <h2 class="section-title"><img class="section-title__icon" src="assets/images/icons/star.svg"> Our <strong>Features</strong></h2>
+    <h2 class="section-title"><img class="section-title__icon lazyload" data-srcset="assets/images/icons/star.svg"> Our <strong>Features</strong></h2>
     
     <div class="row row--gutters-large generic-content">
       <div class="row__medium-6">
        <div class="feature-item">
-        <img class="feature-item__icon" src="assets/images/icons/rain.svg">
+        <img class="feature-item__icon lazyload" data-srcset="assets/images/icons/rain.svg">
         <h3 class="feature-item__title">We&rsquo;ll Watch the Weather</h3>
         <p>Download our app and we&rsquo;ll send you a notice if it&rsquo;s about to rain in the next 20 minutes around your current location. A good rain can be refreshing, but sometimes you just want to stay dry.</p>
        </div>
        <div class="feature-item">
-        <img class="feature-item__icon" src="assets/images/icons/globe.svg">
+        <img class="feature-item__icon lazyload" data-srcset="assets/images/icons/globe.svg">
         <h3 class="feature-item__title">Global Guides</h3>
         <p>We&rsquo;ve scoured the entire planet for the best retreats and beautiful vistas. If there&rsquo;s a corner of the world you want to escape to we know the most scenic and inspiring locations.</p>
        </div>
       </div>
       <div class="row__medium-6">
        <div class="feature-item">
-        <img class="feature-item__icon" src="assets/images/icons/wifi.svg">
+        <img class="feature-item__icon lazyload" data-srcset="assets/images/icons/wifi.svg">
         <h3 class="feature-item__title">Wi-Fi Waypoints</h3>
         <p>We only send you on trips to places we can personally vouch for as being amazing. Which means we&rsquo;ve mapped out where local wi-fi spots are and marked them in our app&rsquo;s map view.</p>
        </div> 
        <div class="feature-item">
-        <img class="feature-item__icon" src="assets/images/icons/fire.svg">
+        <img class="feature-item__icon lazyload" data-srcset="assets/images/icons/fire.svg">
         <h3 class="feature-item__title">Survival Kit</h3>
         <p>Everytime you book an escape with us we send you a survival kit with the finest materials. The kit will allow you to setup a tent, start a fire, scratch your own back and lower your taxes.</p>
        </div>
@@ -109,15 +110,15 @@
    </div> 
   </div>
 
-  <div id="testimonials" class="page-section page-section--testemonials" data-link="#testimonials-link">
+  <div id="testimonials" class="page-section page-section--testemonials lazyload" data-link="#testimonials-link">
    <div class="wrapper wrapper--no-padd-m">
    
-    <h2 class="section-title section-title--blue"><img class="section-title__icon" src="assets/images/icons/comment.svg"> Real <strong>Testimonials</strong></h2>
+    <h2 class="section-title section-title--blue"><img class="section-title__icon lazyload" data-srcset="assets/images/icons/comment.svg"> Real <strong>Testimonials</strong></h2>
     <div class="row row--gutters row--equal-height-m row--gutters-small row--t-padding generic-content">
       <div class="row__medium-4">
        <div class="testemonial">
           <div class="testemonial__photo">
-            <img src="assets/images/testimonial-jane.jpg">
+            <img class="lazyload" data-srcset="assets/images/testimonial-jane.jpg">
           </div>
           <h3 class="testemonial__title">Jane Doe</h3>
           <h4 class="testemonial__subtitle">9 Time Escaper</h4>
@@ -127,7 +128,7 @@
       <div class="row__medium-4">
        <div class="testemonial">
         <div class="testemonial__photo">
-          <img src="assets/images/testimonial-john.jpg">
+          <img class="lazyload" data-srcset="assets/images/testimonial-john.jpg">
         </div>  
         <h3  class="testemonial__title">John Smith</h3>
         <h4 class="testemonial__subtitle">4 Time Escaper</h4>
@@ -137,7 +138,7 @@
       <div class="row__medium-4">
        <div class="testemonial testemonial--last">
         <div class="testemonial__photo">
-          <img src="assets/images/testimonial-cat.jpg">
+          <img class="lazyload" data-srcset="assets/images/testimonial-cat.jpg">
         </div>
         <h3  class="testemonial__title">Cat McKitty</h3>
         <h4 class="testemonial__subtitle">6 Time Escaper</h4>
@@ -150,15 +151,15 @@
 
   <div class="modal">
    <div class="modal--center">
-    <h2 class="section-title section-title--blue section-title--less-margin"><img class="section-title__icon" src="assets/images/icons/mail.svg"> Get in <strong>Touch</strong></h2>
+    <h2 class="section-title section-title--blue section-title--less-margin"><img class="section-title__icon lazyload" data-srcset="assets/images/icons/mail.svg"> Get in <strong>Touch</strong></h2>
     <div class="wrapper wrapper--modal">
       <p class="modal__desc">We will have online order system in place soon. Untill then, connect witch us on any of the platforms below!</p>
     </div>
     <div class="social-icons">
-      <a href="#" class="social-icons__icon"><img class="section-title__icon social-icons__img" src="assets/images/icons/facebook.svg"></a>
-      <a href="#" class="social-icons__icon"><img class="section-title__icon social-icons__img" src="assets/images/icons/twitter.svg"></a> 
-      <a href="#" class="social-icons__icon"><img class="section-title__icon social-icons__img" src="assets/images/icons/instagram.svg"></a>
-      <a href="#" class="social-icons__icon"><img class="section-title__icon social-icons__img" src="assets/images/icons/youtube.svg"></a>    
+      <a href="#" class="social-icons__icon"><img class="section-title__icon social-icons__img lazyload" data-srcset="assets/images/icons/facebook.svg"></a>
+      <a href="#" class="social-icons__icon"><img class="section-title__icon social-icons__img lazyload" data-srcset="assets/images/icons/twitter.svg"></a> 
+      <a href="#" class="social-icons__icon"><img class="section-title__icon social-icons__img lazyload" data-srcset="assets/images/icons/instagram.svg"></a>
+      <a href="#" class="social-icons__icon"><img class="section-title__icon social-icons__img lazyload" data-srcset="assets/images/icons/youtube.svg"></a>    
     </div>
    </div>
    <div class="modal__close">X</div> 
@@ -170,5 +171,6 @@
       </div>
   </footer>
   <script type="text/javascript" src="app.js"></script>
+
 </body>
 </html>

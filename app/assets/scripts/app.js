@@ -1,9 +1,9 @@
 
-import MobileMenu from './modules/mobileMenu'
-import RevealOnScroll from './modules/revealOnScroll'
+import MobileMenu from './modules/mobileMenu';
+import RevealOnScroll from './modules/revealOnScroll';
 import $ from 'jquery';
-import StickyHeader from './modules/stickyHeader'
-import Modal from './modules/modal'
+import StickyHeader from './modules/stickyHeader';
+import Modal from './modules/modal';
 
 
 var mobileMenu = new MobileMenu();
