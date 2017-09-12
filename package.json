@@ -10,6 +10,7 @@
     "lazysizes": "^4.0.0-rc3",
     "node-normalize-scss": "^3.0.0",
     "normalize.css": "^7.0.0",
+    "picturefill": "^3.0.2",
     "waypoints": "^4.0.1"
   },
   "devDependencies": {
